@@ -1,7 +1,7 @@
 def bubble_sort(arr)
 	elements_left_to_sort = arr.length - 1
 	is_sorted = false
-	until is_sorted || elements_left_to_sort == 0
+	until is_sorted
 		index = 0
 		is_sorted = true
 		while index < elements_left_to_sort
@@ -21,7 +21,7 @@ end
 def bubble_sort_by(arr)
 	elements_left_to_sort = arr.length - 1
 	is_sorted = false
-	until is_sorted || elements_left_to_sort == 0
+	until is_sorted
 		index = 0
 		is_sorted = true
 		while index < elements_left_to_sort

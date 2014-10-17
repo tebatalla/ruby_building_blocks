@@ -63,10 +63,10 @@ module Enumerable
 		return count
 	end
 
-	def my_map
+	def my_map(&proc1)
 		result = []
-		self.my_each_with_index do |i,index|
-			result << yield(i)
+		self.my_each do |i|
+			result << proc1.call(i)
 		end
 		return result
 	end
@@ -78,8 +78,6 @@ module Enumerable
 		end
 		return result
 	end
-
-
 
 end
 

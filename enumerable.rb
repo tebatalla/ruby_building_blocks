@@ -44,6 +44,15 @@ module Enumerable
 		return false
 	end
 
+	def my_none?
+		self.my_each do |i|
+			if yield(i)
+				return false
+			end
+		end
+		return true
+	end
+
 	def my_count
 		count = 0
 		self.my_each do |i|
@@ -54,4 +63,27 @@ module Enumerable
 		return count
 	end
 
+	def my_map
+		result = []
+		self.my_each_with_index do |i,index|
+			result << yield(i)
+		end
+		return result
+	end
+
+	def my_inject
+		result = self[0]
+		self.my_each_with_index do |i,index|
+			result = index == 0 ? self[0] : yield(result,i)
+		end
+		return result
+	end
+
+
+
+end
+
+
+def multiply_els(arr)
+	arr.my_inject { |x, y| x * y}
 end

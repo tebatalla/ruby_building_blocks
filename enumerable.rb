@@ -26,4 +26,32 @@ module Enumerable
 		return select_result
 	end
 
+	def my_all?
+		self.my_each do |i|
+			if !yield(i)
+				return false
+			end
+		end
+		return true
+	end
+
+	def my_any?
+		self.my_each do |i|
+			if yield(i)
+				return true
+			end
+		end
+		return false
+	end
+
+	def my_count
+		count = 0
+		self.my_each do |i|
+			if yield(i)
+				count += 1
+			end
+		end
+		return count
+	end
+
 end

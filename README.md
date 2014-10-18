@@ -29,13 +29,13 @@ substrings("Do you believe in miracles?", ["do", "I", "think", "mir", "e"])
 
 ##bubble_sort and bubble_sort_by
 
-'#bubble_sort' takes an array argument and sorts the array using the bubble sort algorithm. This algorithm compares the first and second, swaps the values if first is larger, then compares second and third until first iteration is complete. Then the pattern repeats
+`#bubble_sort` takes an array argument and sorts the array using the bubble sort algorithm. This algorithm compares the first and second, swaps the values if first is larger, then compares second and third until first iteration is complete. Then the pattern repeats
 ```
 bubble_sort([2, 1, 5, 6, 7])
 => [1, 2, 5, 6, 7]
 ```
 
-'#bubble_sort_by' works the same way, except that a block is taken as the sorting criteria. If the result of the sorting criteria is negative, the values will swap
+`#bubble_sort_by` works the same way, except that a block is taken as the sorting criteria. If the result of the sorting criteria is negative, the values will swap
 ```
 bubble_sort_by(["Tom", "Steven", "Suzy", "Julia"]){ |left, right| right.length - left.length }
 => ["Tom", "Suzy", "Julia", "Steven"]
@@ -44,12 +44,12 @@ bubble_sort_by(["Tom", "Steven", "Suzy", "Julia"]){ |left, right| right.length -
 ##enumerable.rb
 
 This file contains common enumerable methods, custom built. They are:
--`my_each`
--`my_each_with_index`
--`my_select`
--`my_all?`
--`my_any?`
--`my_none?`
--`my_count`
--`my_map`
--`my_inject`
+- `my_each`
+- `my_each_with_index`
+- `my_select`
+- `my_all?`
+- `my_any?`
+- `my_none?`
+- `my_count`
+- `my_map`
+- `my_inject`
